@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html x-data="{colorMode: localStorage.getItem('colorMode') || localStorage.setItem('colorMode', 'light')}" x-init="$watch('colorMode', val => localStorage.setItem('colorMode', val))" x-bind:class="{'dark': colorMode === 'dark' || (colorMode === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)}" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>home - Halved</title>
+  <meta name="description" content="" />
+  <link rel="icon" type="image/x-icon" href="https://ik.imagekit.io/n0uvizrukm2/websites/chai-cloud/Vector__2__H9Chm1ngK.svg">
+  <meta property="og:title" content="home - Halved" />
+  <meta property="og:image" content="" />
+
+  <link id="heading-font" rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700;800;900&display=swap" media="all" />
+  <link rel="stylesheet" href="./home.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+</head>
+
+<body x-data="{'openDialogId': ''}" x-on:keydown.escape="openDialogId=''" class="font-body antialiased text-[#41454c] bg-[#FFFFFF] dark:text-[#b3c3d9] dark:bg-[#000000]">
+  <div class="mb-16">
+    <div class="bg-gray-50 dark:bg-gray-900">
+      <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <div class="max-w-xl mb-10 sm:text-center md:mx-auto md:mb-12 lg:max-w-2xl xl:max-w-3xl">
+          <h2 class="mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-slate-900 dark:text-slate-100 sm:text-4xl md:mx-auto lg:text-5xl">Compare Prices Across The UK, For The Best Deal.</h2>
+          <p class="text-base md:text-lg">No more searching for the best deals, let halved do it for you.</p>
+        </div>
+      </div>
+    </div>
+    <div class="relative px-4 sm:px-0">
+      <div class="absolute inset-0 h-1/2 bg-gray-50 dark:bg-gray-900"></div>
+      <div class="relative grid mx-auto overflow-hidden bg-white divide-y rounded shadow dark:bg-black dark:shadow-gray-700 sm:divide-y-0 sm:divide-x sm:max-w-screen-sm sm:grid-cols-3 lg:max-w-screen-md">
+        <div class="inline-block p-8 text-center">
+          <div class="flex items-center justify-center w-12 h-12 mx-auto mb-4 rounded-full dark:bg-gray-900 bg-gray-100"><span class="text-2xl text-secondary-500">
+              <div style="font-size:inherit;color:inherit;padding:2px"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M427.84 380.67l-196.5 97.82a18.6 18.6 0 0 1-14.67 0L20.16 380.67c-4-2-4-5.28 0-7.29L67.22 350a18.65 18.65 0 0 1 14.69 0l134.76 67a18.51 18.51 0 0 0 14.67 0l134.76-67a18.62 18.62 0 0 1 14.68 0l47.06 23.43c4.05 1.96 4.05 5.24 0 7.24zm0-136.53l-47.06-23.43a18.62 18.62 0 0 0-14.68 0l-134.76 67.08a18.68 18.68 0 0 1-14.67 0L81.91 220.71a18.65 18.65 0 0 0-14.69 0l-47.06 23.43c-4 2-4 5.29 0 7.31l196.51 97.8a18.6 18.6 0 0 0 14.67 0l196.5-97.8c4.05-2.02 4.05-5.3 0-7.31zM20.16 130.42l196.5 90.29a20.08 20.08 0 0 0 14.67 0l196.51-90.29c4-1.86 4-4.89 0-6.74L231.33 33.4a19.88 19.88 0 0 0-14.67 0l-196.5 90.28c-4.05 1.85-4.05 4.88 0 6.74z"></path>
+                </svg></div>
+            </span></div>
+          <p class="font-bold tracking-wide">Speed - Compare millions of products in seconds</p>
+        </div>
+        <div class="inline-block p-8 text-center">
+          <div class="flex items-center justify-center w-12 h-12 mx-auto mb-4 rounded-full dark:bg-gray-900 bg-gray-100"><span class="text-2xl text-secondary-500">
+              <div style="font-size:inherit;color:inherit;padding:2px"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 640 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M624 352h-16V243.9c0-12.7-5.1-24.9-14.1-33.9L494 110.1c-9-9-21.2-14.1-33.9-14.1H416V48c0-26.5-21.5-48-48-48H112C85.5 0 64 21.5 64 48v48H8c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8h272c4.4 0 8 3.6 8 8v16c0 4.4-3.6 8-8 8H40c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8h208c4.4 0 8 3.6 8 8v16c0 4.4-3.6 8-8 8H8c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8h208c4.4 0 8 3.6 8 8v16c0 4.4-3.6 8-8 8H64v128c0 53 43 96 96 96s96-43 96-96h128c0 53 43 96 96 96s96-43 96-96h48c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zM160 464c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48zm320 0c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48zm80-208H416V144h44.1l99.9 99.9V256z"></path>
+                </svg></div>
+            </span></div>
+          <p class="font-bold tracking-wide">Check Stock instantly</p>
+        </div>
+        <div class="inline-block p-8 text-center">
+          <div class="flex items-center justify-center w-12 h-12 mx-auto mb-4 rounded-full dark:bg-gray-900 bg-gray-100"><span class="text-2xl text-secondary-500">
+              <div style="font-size:inherit;color:inherit;padding:2px"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M502.285 159.704l-234-156c-7.987-4.915-16.511-4.96-24.571 0l-234 156C3.714 163.703 0 170.847 0 177.989v155.999c0 7.143 3.714 14.286 9.715 18.286l234 156.022c7.987 4.915 16.511 4.96 24.571 0l234-156.022c6-3.999 9.715-11.143 9.715-18.286V177.989c-.001-7.142-3.715-14.286-9.716-18.285zM278 63.131l172.286 114.858-76.857 51.429L278 165.703V63.131zm-44 0v102.572l-95.429 63.715-76.857-51.429L234 63.131zM44 219.132l55.143 36.857L44 292.846v-73.714zm190 229.715L61.714 333.989l76.857-51.429L234 346.275v102.572zm22-140.858l-77.715-52 77.715-52 77.715 52-77.715 52zm22 140.858V346.275l95.429-63.715 76.857 51.429L278 448.847zm190-156.001l-55.143-36.857L468 219.132v73.714z"></path>
+                </svg></div>
+            </span></div>
+          <p class="font-bold tracking-wide">Launching Soon.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- AlpineJS Library -->
+  <script defer src="https://unpkg.com/alpinejs@3.9.0/dist/cdn.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      offset: 50,
+      duration: 800
+    });
+  </script>
+
+
+</body>
+
+</html>
